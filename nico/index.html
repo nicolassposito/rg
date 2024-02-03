@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name=”apple-mobile-web-app-capable” content=”yes “>
+    
+    <title>Minha Carteira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body style="font-family: 'Roboto', sans-serif; margin: 0; padding: 0; overflow: hidden; background-color: #fff;">
+    <header style="display: flex; align-items: center; padding: 18px 20px 16px; border-bottom: 1px solid #ddd;">
+        <div style="color: #044897; display: flex; align-items: center; width: 100%;">
+            <p style="text-align: center; margin: auto; color: #424242; font-weight: 500;">Minha Carteira</p>
+        </div>
+    </header>
+
+    <a href="rg.html" style="display: flex; flex-direction: column; color: #000; text-decoration: none; background-color: #f0f0f0; margin: 10px 20px; border-radius: 10px; overflow: hidden; position: relative;">
+        <div style="background-color: #044897; width: 5px; height: 200px; position: absolute; top: 0;"></div>
+        <div style="padding: 10px; margin-left: 10px;">
+            <p style="font-weight: 500; margin: 5px 0 8px;">RG DIGITAL - SÃO PAULO</p>
+            <span style="font-weight: 300;">NICOLAS TESTA</span>
+            <span style="display: flex; align-items: center; margin-top: 10px;"><img src="icon.png" width="30px" style="margin-bottom: 5px; margin-right: 2px;">236.575.628-00</span>
+        </div>
+    </a>
+
+    <style>
+    @font-face {
+        font-family: 'Quentin';
+        src: url(Quentin.otf)
+    }
+
+    img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+       display: none;
+    }
+
+    .swiper {
+        width: 600px;
+        height: 300px;
+    }
+    </style>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+
+        });
+    </script>
+
+</body>
+
+
+<script>
+var currentdate = new Date(); 
+var datetime = "Last Sync: " + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+
+                console.log(datetime);
+                document.getElementById("ano").innerText = currentdate.getFullYear();
+                document.getElementById("mes").innerText = currentdate.getMonth()+1;
+                document.getElementById("dia").innerText = currentdate.getDate();
+                document.getElementById("hora").innerText = currentdate.getHours();
+                document.getElementById("minuto").innerText = currentdate.getMinutes();
+</script>
+</html>
